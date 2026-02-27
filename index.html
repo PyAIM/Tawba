@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head><script>
+  (function(){
+    var l=window.location;
+    if(l.search[1]==='/'&&l.pathname.indexOf('/Tawba/')===0){
+      var decoded=l.search.slice(1).split('&').map(function(s){return s.replace(/~and~/g,'&')}).join('?');
+      window.history.replaceState(null,null,l.pathname.slice(0,l.pathname.indexOf('/',1))+decoded+l.hash);
+    }
+  })();
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>تَوْبَة — Tawba</title>
+    <meta name="description" content="موقع تَوْبَة لتعليم القرآن الكريم والحديث الشريف والسنة النبوية" />
+    <!-- Google Fonts: Amiri for Quran text, Noto Naskh Arabic for UI, Cormorant Garamond for English -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/Tawba/assets/index-CPbEAGRF.js"></script>
+    <link rel="stylesheet" crossorigin href="/Tawba/assets/index-CmI_1Vim.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
