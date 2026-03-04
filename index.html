@@ -2,28 +2,52 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <!-- GitHub Pages SPA: restore path encoded by 404.html -->
-    <script>
-      (function(){
-        var l=window.location;
-        if(l.search[1]==='/'){
-          var decoded=l.search.slice(1).split('&').map(function(s){return s.replace(/~and~/g,'&')}).join('?');
-          window.history.replaceState(null,null,l.pathname.slice(0,l.pathname.indexOf('/',0)||l.pathname.length)+decoded+l.hash);
-        }
-      })();
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>تَوْبَة — Tawba</title>
-    <meta name="description" content="موقع تَوْبَة لتعليم القرآن الكريم والحديث الشريف والسنة النبوية" />
+    <!-- Redirect pyaim.github.io/Tawba to tawba.org -->
+    <script>
+      if (window.location.hostname === 'pyaim.github.io') {
+        var path = window.location.pathname.replace('/Tawba', '') || '/';
+        window.location.replace('https://tawba.org' + path + window.location.search + window.location.hash);
+      }
+    </script>
+    <meta name="description" content="موقع تَوْبَة لتعليم القرآن الكريم والحديث الشريف والسنة النبوية — Tawba: an Islamic learning platform for Quran, Hadith, and Sunnah." />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tawba.org" />
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tawba.org" />
+    <meta property="og:title" content="تَوْبَة — Tawba" />
+    <meta property="og:description" content="منصة تعليمية إسلامية شاملة لتعلم القرآن الكريم والحديث الشريف والسنة النبوية — An Islamic learning platform for Quran, Hadith, and Sunnah." />
+    <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/97673456/Wpy9NAqEh4UP8L8bqMKgye/tawba-hero-og_43125916.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="Tawba" />
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://tawba.org" />
+    <meta name="twitter:title" content="تَوْبَة — Tawba" />
+    <meta name="twitter:description" content="منصة تعليمية إسلامية شاملة لتعلم القرآن الكريم والحديث الشريف والسنة النبوية" />
+    <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/97673456/Wpy9NAqEh4UP8L8bqMKgye/tawba-hero-og_43125916.jpg" />
     <!-- Google Fonts: Amiri for Quran text, Noto Naskh Arabic for UI, Cormorant Garamond for English -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-6iFCO4l6.js"></script>
+    <script type="module" crossorigin src="/assets/index-D0t5pFRy.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B6ErLZMr.css">
   </head>
   <body>
     <div id="root"></div>
-
+    <script
+      defer
+      src="https://manus-analytics.com/umami"
+      data-website-id="2c937c7e-2938-4f90-bbb8-b05f0f165b7d"></script>
   </body>
 </html>

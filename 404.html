@@ -4,20 +4,23 @@
   <meta charset="utf-8" />
   <title>Tawba</title>
   <script>
-    // GitHub Pages SPA redirect — root domain version (tawba.org)
-    // Encodes the path/query/hash into the search string so the main index.html
-    // can restore it via history.replaceState.
-    (function () {
-      var l = window.location;
-      // Only redirect if we are not already at the root
-      if (l.pathname !== '/') {
-        var encoded = l.pathname.slice(1).replace(/&/g, '~and~');
-        var query = l.search ? l.search.slice(1).replace(/&/g, '~and~') : '';
-        var redirect = l.protocol + '//' + l.host + '/?/' + encoded +
-          (query ? '&' + query : '') + l.hash;
-        window.location.replace(redirect);
-      }
-    })();
+    // Redirect pyaim.github.io/Tawba to tawba.org
+    if (window.location.hostname === 'pyaim.github.io') {
+      var path = window.location.pathname.replace('/Tawba', '') || '/';
+      window.location.replace('https://tawba.org' + path + window.location.search + window.location.hash);
+    } else {
+      // GitHub Pages SPA redirect — root domain version (tawba.org)
+      (function () {
+        var l = window.location;
+        if (l.pathname !== '/') {
+          var encoded = l.pathname.slice(1).replace(/&/g, '~and~');
+          var query = l.search ? l.search.slice(1).replace(/&/g, '~and~') : '';
+          var redirect = l.protocol + '//' + l.host + '/?/' + encoded +
+            (query ? '&' + query : '') + l.hash;
+          window.location.replace(redirect);
+        }
+      })();
+    }
   </script>
 </head>
 <body></body>
